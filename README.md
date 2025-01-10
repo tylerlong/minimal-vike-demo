@@ -8,3 +8,8 @@ still demonstrates major features of Vike.
 ```
 yarn vike dev
 ```
+
+## Notes
+
+This repo tries to build everything from scratch. I may not be the best way. You
+may want to use `vike-react` instead.

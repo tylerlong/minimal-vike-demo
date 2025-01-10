@@ -8,6 +8,7 @@
     "react-dom": "^19.0.0",
     "sass-embedded": "^1.83.1",
     "vike": "^0.4.213",
-    "vite": "^6.0.7"
+    "vite": "^6.0.7",
+    "wait-for-async": "^0.7.5"
   }
 }
