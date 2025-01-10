@@ -1,11 +1,14 @@
 import React from "react";
 
 import "./Layout.scss";
+import { PageContextProvider } from "./usePageContext";
 
-export function Layout({ children }) {
+export function Layout({ children, pageContext }) {
   return (
     <React.StrictMode>
-      {children}
+      <PageContextProvider pageContext={pageContext}>
+        {children}
+      </PageContextProvider>
     </React.StrictMode>
   );
 }

@@ -7,7 +7,7 @@ export async function onRenderClient(pageContext) {
   const { Page } = pageContext;
   hydrateRoot(
     document.getElementById("root")!,
-    <Layout>
+    <Layout pageContext={pageContext}>
       <Page />
     </Layout>,
   );

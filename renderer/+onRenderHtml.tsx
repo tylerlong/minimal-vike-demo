@@ -8,7 +8,7 @@ export async function onRenderHtml(pageContext) {
   const { Page } = pageContext;
   const viewHtml = dangerouslySkipEscape(
     renderToString(
-      <Layout>
+      <Layout pageContext={pageContext}>
         <Page />
       </Layout>,
     ),
