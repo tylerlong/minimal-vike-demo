@@ -1,6 +1,5 @@
-export default Page;
-
 import React from "react";
+
 import { Counter } from "./Counter";
 
 function Page() {
@@ -17,3 +16,5 @@ function Page() {
     </>
   );
 }
+
+export default Page;

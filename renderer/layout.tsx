@@ -1,5 +1,6 @@
 import React from "react";
-import "./layout.scss";
+
+import "./Layout.scss";
 
 export function Layout({ children }) {
   return (
