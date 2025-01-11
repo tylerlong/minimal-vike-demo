@@ -1,8 +1,8 @@
 import React from "react";
-import { auto } from "manate/react";
+import { auto } from "manate/react.js";
 
-import store from "../../store";
-import { supabase } from "../../supabase/client";
+import store from "../../store.js";
+import { supabase } from "../../supabase/client.js";
 
 export const Counter = auto(() => {
   return (

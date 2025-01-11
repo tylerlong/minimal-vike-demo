@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
-    "module": "nodenext"
+    "esModuleInterop": true,
+    "jsx": "react",
+    "noImplicitAny": false,
+    "lib": ["DOM"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext"
   },
   "include": ["**/*.ts", "**/*.tsx", "vite.env.d.ts"]
 }

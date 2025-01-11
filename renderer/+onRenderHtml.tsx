@@ -2,7 +2,7 @@ import React from "react";
 import { renderToString } from "react-dom/server";
 import { dangerouslySkipEscape, escapeInject } from "vike/server";
 
-import { Layout } from "./Layout";
+import { Layout } from "./Layout.js";
 
 export async function onRenderHtml(pageContext) {
   const { Page } = pageContext;
