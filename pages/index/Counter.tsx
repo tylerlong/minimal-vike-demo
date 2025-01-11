@@ -1,5 +1,6 @@
 import React from "react";
 import { auto } from "manate/react.js";
+import { Button } from "antd";
 
 import store from "../../store.js";
 import { supabase } from "../../supabase/client.js";
@@ -9,7 +10,7 @@ export const Counter = auto(() => {
     <div>
       {store.session === undefined
         ? (
-          <button
+          <Button
             onClick={() =>
               supabase.auth.signInWithOAuth({
                 provider: "github",
@@ -19,16 +20,16 @@ export const Counter = auto(() => {
               })}
           >
             Log in
-          </button>
+          </Button>
         )
         : (
-          <button
+          <Button
             onClick={() => {
               supabase.auth.signOut();
             }}
           >
             Log out
-          </button>
+          </Button>
         )}
     </div>
   );

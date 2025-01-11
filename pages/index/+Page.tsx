@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "antd";
 
 import { Counter } from "./Counter.js";
 import { useData } from "../../renderer/useData.js";
@@ -11,6 +12,9 @@ function Page() {
       This page is:
       <ul>
         <li>Rendered to HTML.</li>
+        <li>
+          <Button>Ant Design Button</Button>
+        </li>
         <li>
           <Counter />
         </li>
