@@ -1,10 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
+import { auto } from "manate/react";
 
-export function Counter() {
-  const [count, setCount] = useState(0);
+import store from "../../store";
+import { supabase } from "../../supabase/client";
+
+export const Counter = auto(() => {
   return (
-    <button type="button" onClick={() => setCount((count) => count + 1)}>
-      Counter {count}
-    </button>
+    <div>
+      {store.session === undefined
+        ? (
+          <button
+            onClick={() =>
+              supabase.auth.signInWithOAuth({
+                provider: "github",
+                options: {
+                  redirectTo: `${location.origin}${location.pathname}`,
+                },
+              })}
+          >
+            Log in
+          </button>
+        )
+        : (
+          <button
+            onClick={() => {
+              supabase.auth.signOut();
+            }}
+          >
+            Log out
+          </button>
+        )}
+    </div>
   );
-}
+});

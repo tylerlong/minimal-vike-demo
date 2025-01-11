@@ -12,7 +12,7 @@ function Page() {
       <ul>
         <li>Rendered to HTML.</li>
         <li>
-          Interactive. <Counter />
+          <Counter />
         </li>
       </ul>
     </>
